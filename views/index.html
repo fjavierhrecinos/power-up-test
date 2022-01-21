@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hey there! 👋</h1>
+
+    <p>This is the HTML connector for the Power-Up. It will be loaded into a hidden iframe when your Power-Up is enabled.</p>
+   
+    <p>Not sure what is going on? Head on over to the <a id="readme" href="https://glitch.com/edit/#!/trello-power-up-skeleton?path=README.md">README</a>.</p>
+  
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+    <script src="./js/client.js"></script>
+    <script style="text/javascript">
+      let projectName = window.location.hostname.slice(0, window.location.hostname.length-10)
+      document.getElementById("readme").setAttribute("href", "https://glitch.com/edit/#!/" + projectName + "?path=README.md");
+    </script>
+</body>
+</html>
